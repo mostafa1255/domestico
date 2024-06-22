@@ -114,11 +114,17 @@ class _ItemDetailsState extends State<ItemDetails> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    widget.productModel.name.toString(),
-                                    style: const TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
+                                  SizedBox(
+                                    width: 300,
+                                    height: 30,
+                                    child: Text(
+                                      widget.productModel.name.toString(),
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                      style: const TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ],
                               ),

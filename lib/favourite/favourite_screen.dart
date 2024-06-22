@@ -48,7 +48,9 @@ class FavouriteScreen extends StatelessWidget {
               future: SaveFavoriteProducts.getItems(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return Expanded(
+                  return SizedBox(
+                    height: 300,
+                    width: 300,
                     child: ListView.builder(
                       itemBuilder: (context, index) => Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -119,64 +121,6 @@ class FavouriteScreen extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 230.0),
-            child: Text(
-              'Favourite Sitters',
-              style: MyTheme.lightTheme.textTheme.titleMedium,
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Expanded(
-              child: ListView.builder(
-            itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Material(
-                elevation: 5,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(width: 3, color: Colors.transparent),
-                  ),
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/img.png'),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            '2.5 km',
-                            style: TextStyle(
-                                fontSize: 15, color: MyTheme.primaryLight),
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          FavoriteButton(
-                            valueChanged: (_) {},
-                            iconSize: 40,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        '5.0(100 Reviews)',
-                        style: TextStyle(fontSize: 20),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            itemCount: 5,
-            scrollDirection: Axis.horizontal,
-          )),
         ],
       ),
     ));

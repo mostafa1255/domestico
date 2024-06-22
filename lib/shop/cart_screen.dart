@@ -5,7 +5,6 @@ import 'package:domestico/shop/payment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-
 class CartScreen extends StatefulWidget {
   static const String routeName = 'CartScreen';
 
@@ -149,7 +148,7 @@ class _CartScreenState extends State<CartScreen> {
                                 ),
                               ),
                               Text(
-                                '$_counter',
+                                '1',
                                 style: TextStyle(
                                   color: MyTheme.blackColor,
                                   fontSize: 18,

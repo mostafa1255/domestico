@@ -3,7 +3,6 @@ import 'package:dio/dio.dart';
 import 'package:domestico/DataLayer/models/user_model.dart';
 import 'package:domestico/constants/helper.dart';
 import 'package:meta/meta.dart';
-
 part 'booking_state.dart';
 
 class BookingCubit extends Cubit<BookingState> {
